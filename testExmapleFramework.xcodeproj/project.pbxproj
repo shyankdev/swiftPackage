@@ -10,6 +10,7 @@
 		7CD1AD8E29E9EB00009A9AE2 /* testExmapleFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD1AD8429E9EB00009A9AE2 /* testExmapleFramework.framework */; };
 		7CD1AD9329E9EB00009A9AE2 /* testExmapleFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1AD9229E9EB00009A9AE2 /* testExmapleFrameworkTests.swift */; };
 		7CD1AD9529E9EB00009A9AE2 /* testExmapleFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD1AD8729E9EB00009A9AE2 /* testExmapleFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CD1ADE029E9F625009A9AE2 /* LazyDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1ADDF29E9F625009A9AE2 /* LazyDev.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		7CD1AD8D29E9EB00009A9AE2 /* testExmapleFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testExmapleFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD1AD9229E9EB00009A9AE2 /* testExmapleFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testExmapleFrameworkTests.swift; sourceTree = "<group>"; };
 		7CD1AD9429E9EB00009A9AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD1ADDF29E9F625009A9AE2 /* LazyDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyDev.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,8 @@
 		7CD1AD7A29E9EB00009A9AE2 = {
 			isa = PBXGroup;
 			children = (
-				7CD1AD8629E9EB00009A9AE2 /* testExmapleFramework */,
-				7CD1AD9129E9EB00009A9AE2 /* testExmapleFrameworkTests */,
+				7CD1ADC929E9F447009A9AE2 /* Sources */,
+				7CD1ADCA29E9F450009A9AE2 /* Tests */,
 				7CD1AD8529E9EB00009A9AE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,13 +70,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7CD1AD8629E9EB00009A9AE2 /* testExmapleFramework */ = {
+		7CD1AD8629E9EB00009A9AE2 /* testExmapleFrameworkPackage */ = {
 			isa = PBXGroup;
 			children = (
 				7CD1AD8729E9EB00009A9AE2 /* testExmapleFramework.h */,
 				7CD1AD8829E9EB00009A9AE2 /* Info.plist */,
+				7CD1ADDF29E9F625009A9AE2 /* LazyDev.swift */,
 			);
-			path = testExmapleFramework;
+			path = testExmapleFrameworkPackage;
 			sourceTree = "<group>";
 		};
 		7CD1AD9129E9EB00009A9AE2 /* testExmapleFrameworkTests */ = {
@@ -84,6 +87,22 @@
 				7CD1AD9429E9EB00009A9AE2 /* Info.plist */,
 			);
 			path = testExmapleFrameworkTests;
+			sourceTree = "<group>";
+		};
+		7CD1ADC929E9F447009A9AE2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1AD8629E9EB00009A9AE2 /* testExmapleFrameworkPackage */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7CD1ADCA29E9F450009A9AE2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7CD1AD9129E9EB00009A9AE2 /* testExmapleFrameworkTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +166,7 @@
 				TargetAttributes = {
 					7CD1AD8329E9EB00009A9AE2 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					7CD1AD8C29E9EB00009A9AE2 = {
 						CreatedOnToolsVersion = 12.4;
@@ -194,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CD1ADE029E9F625009A9AE2 /* LazyDev.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 		7CD1AD9929E9EB00009A9AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GYC33JXUYY;
@@ -357,6 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = testExmapleFramework.testExmapleFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +388,7 @@
 		7CD1AD9A29E9EB00009A9AE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GYC33JXUYY;
@@ -389,6 +413,7 @@
 		7CD1AD9C29E9EB00009A9AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYC33JXUYY;
 				INFOPLIST_FILE = testExmapleFrameworkTests/Info.plist;
@@ -407,6 +432,7 @@
 		7CD1AD9D29E9EB00009A9AE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GYC33JXUYY;
 				INFOPLIST_FILE = testExmapleFrameworkTests/Info.plist;
